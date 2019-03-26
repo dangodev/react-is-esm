@@ -1,0 +1,46 @@
+{
+  "name": "react-is-esm",
+  "version": "16.8.4-alpha.1",
+  "description": "Brand checking of React Elements.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/facebook/react.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/facebook/react/issues"
+  },
+  "scripts": {
+    "build": "pack build"
+  },
+  "homepage": "https://reactjs.org/",
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg",
+        {
+          "exclude": [
+            "**/__tests__/**/*"
+          ]
+        }
+      ],
+      [
+        "@pika/plugin-build-web"
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-flow": "^7.0.0",
+    "@pika/pack": "^0.3.6",
+    "@pika/plugin-build-web": "^0.3.14",
+    "@pika/plugin-standard-pkg": "^0.3.14",
+    "babel-plugin-module-resolver": "^3.2.0"
+  },
+  "peerDependencies": {
+    "react-esm": "^16.0.0"
+  }
+}

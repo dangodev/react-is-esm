@@ -1,0 +1,14 @@
+{
+  "presets": ["@babel/preset-flow"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "shared": ["./src/react-shared"],
+          "react": ["react-esm"]
+        }
+      }
+    ]
+  ]
+}
